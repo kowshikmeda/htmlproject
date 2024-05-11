@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+</head>
+<body>
+	<h1  onmouseleave="acc()">trail of js</h1>
+	<p id="demo">this is paragraph man</p>
+	<button onclick="abc()"  >click</button>
+	<input type = "text" id = "input">
+	<button id="in" >submit</button>
+	<input type="text" required >
+	<script>
+		let y=document.getElementById("in");
+		let inputEl = document.getElementById("input");
+		y.addEventListener("dblclick",function(){
+			let value = popupbox();
+			document.getElementById("demo").innerHTML = value;
+			if(confirm("shold submit")){
+				alert("true");
+			}
+			else{
+				alert("false");
+			}
+
+		});
+		
+
+		function abc() {
+			alert("action");
+		}
+		function abb(){
+			document.getElementById("demo").style.color="yellow";
+		}
+		function acc(){
+			document.getElementById("demo").style.color="red";
+		}
+		let x =document.getElementById("demo").innerHTML;
+		console.log(x);
+		
+		
+
+		
+	</script>
+
+</body>
+</html>

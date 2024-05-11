@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Birthday Wishes</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f8f8f8;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .container {
+            max-width: 500px;
+            background-color: #fff;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+            animation: slideIn 0.5s ease-out;
+        }
+        h1 {
+            color: #333;
+            margin-bottom: 20px;
+        }
+        p {
+            color: #666;
+            line-height: 1.6;
+        }
+        .signature {
+            font-style: italic;
+            color: #888;
+            margin-top: 20px;
+        }
+        input[type="text"] {
+            padding: 10px;
+            width: 100%;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            margin-bottom: 10px;
+        }
+        button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+        @keyframes slideIn {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Happy Birthday!</h1>
+        <p>Enter your name:</p>
+        <input type="text" id="userName" placeholder="Your Name" />
+        <button onclick="sendWishes()">Spcl Wishes</button>
+        <p id="birthdayMessage" style="display: none;"></p>
+    </div>
+
+    <script>
+        function sendWishes() {
+            var userName = document.getElementById("userName").value;
+            var birthdayMessage = document.getElementById("birthdayMessage");
+            if (userName.trim() === "") {
+                alert("Please enter your name!");
+            } else {
+                birthdayMessage.textContent = "Dear " + userName + " Madam , On this special day, I wish you all the happiness in the world. May your birthday be filled with joy, laughter, and unforgettable moments. Here's to another amazing year ahead filled with love, success, and prosperity .take screenshot don't forgot it.    Best wishes, from telsuga malla mention cheyala(no@).";
+                birthdayMessage.style.display = "block";
+                birthdayMessage.style.animation = "fadeIn 1s ease-out";
+            }
+        }
+    </script>
+</body>
+</html>
+

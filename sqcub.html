@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    </head>
+    <body>
+        <script>
+            h = document.createElement("h1");
+            h.innerText="squares and cubes";
+            document.body.append(h);
+            t=document.createElement("table");
+            t.setAttribute('id',"result");
+            t.setAttribute('border',"1px");
+            thead =document.createElement("thead");
+            td =document.createElement("td");
+            td.innerText="number";
+            thead.append(td);
+            td =document.createElement("td");
+            td.innerText="square";
+            thead.append(td);
+            td =document.createElement("td");
+            td.innerText="cube";
+            thead.append(td);
+            tbody =document.createElement("tbody");
+            t.append(tbody);
+            document.body.append(t);
+            table=document.getElementById('result');
+            for(i =0;i<10;i++)
+            {
+                new_row = table.insertRow();
+                new_row.insertCell(0).innerText=i;
+                new_row.insertCell(1).innerText=i*i;
+                new_row.insertCell(2).innerText=i*i*i;
+            }
+            
+            
+            
+            
+        </script>
+    </body>
+</html>

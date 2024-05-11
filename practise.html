@@ -1,0 +1,21 @@
+<html>
+    <head>
+        <script>
+            
+            function cal(){
+                let val=document.getElementById('num').value;
+                document.getElementById('square').innerHTML= val*val;
+            }
+        </script>
+    </head>
+    <body>
+        <form>
+            <label>Enter a number</label>
+            <input type="text" id="num"><br><br>
+            <button onclick="cal()">calculate</button>
+        </form><br>
+
+        square:<p id="square"></p>
+
+    </body>
+</html>

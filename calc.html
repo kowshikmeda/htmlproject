@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+    <head>
+   <style>     
+  .box{
+    border : 3px solid red;
+    border-radius: 5px;
+  }
+  </style>
+    </head>
+<body>
+    <p>we are trying simple calculator</p>
+    <div class="box">
+        <input type="text" id="displayer"><br>
+        <input type="button" id="one" value="1" onclick=display('1')>
+        <input type="button" id="two" value="2" onclick=display('2')>
+        <input type="button" id="three" value="3" onclick=display('3')><br>
+        <input type="button" id="four" value="4" onclick=display('4')>
+        <input type="button" id="five" value="5" onclick=display('5')>
+        <input type="button" id="six" value="6" onclick=display('6')><br>
+        <input type="button" id="seven" value="7" onclick=display('7')>
+        <input type="button" id="eight" value="8" onclick=display('8')>
+        <input type="button" id="nine" value="9"onclick=display('9')><br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <input type="button" id="zero" value="0" onclick=display("0")><br>
+        <input type="button" id="add" value="+" onclick=display("+")>
+        <input type="button" id="sub" value="-" onclick=display('-')>
+        <input type="button" id="mul" value="*" onclick=display('*')>
+        <input type="button" id="div" value="/" onclick=display('/')>
+        <input type="button" id="equal" value="=" onclick=calc()>
+        <button onclick= display('ac')  >ac</button>
+        <button onclick= display('c')  >c</button>
+        
+
+    </div>
+<script text="javascript">
+ 
+ let x=document.getElementById('displayer');
+ x.addeventlistener('onclick',display);
+
+ function display( value )
+ {
+    if(value=='ac')
+    {
+        x.value="";
+    }
+    else if(value=="c")
+    {
+      x.value=x.value.tostring().slice(0,-1,1);
+    }
+    else{
+  document.getElementById('displayer').value+=value;
+    }
+
+ }
+ function calc()
+ {
+   try {
+    x.value=eval(x.value);
+   } catch (error) {
+    x.value="error";
+   }
+ }
+
+</script>
+</body>
+</html>

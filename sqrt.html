@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+    <head>
+
+    </head>
+    <body>
+        <label>enter the number:</label>
+        <input type="number" id="'num">
+        <input type="button" id="calc" onclick="calculate()" value=calculate>
+        <p id="demo"></p>
+        <table border="10">
+            <tr>
+                <td>the square :</td>
+                <td id="squ">the  </td>
+            </tr>
+            <tr>
+                <td>the cube :</td>
+                <td id="cube">this  </td>
+            </tr>
+        </table>
+        <script>
+            document.addEventListener("DOMContentLoaded", function() {
+            document.getElementById("calc").addEventListener("click", calculate);
+        });
+            function calculate()
+            {
+                let x =document.getElementById("num").value;  
+                let y=x*x;
+                let z = y*x;
+               document.getElementById("squ").innerHTML=y;
+               document.getElementById("cube").innerHTML=z;
+            }
+        </script>
+    </body>
+</html>
